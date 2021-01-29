@@ -87,17 +87,17 @@ describe('Instance of Person', () => {
     })
     it('[9] drive method when NOT enough fuel increases miles by drivable miles', () => {
       batmobile.fill(10)
-      batmobile.drive(201)
+      batmobile.drive(200)
       expect(batmobile.odometer).toEqual(200)
     })
     it('[10] drive method when NOT enough fuel empties the tank', () => {
       batmobile.fill(10)
-      batmobile.drive(201)
+      batmobile.drive(200)
       expect(batmobile.tank).toEqual(0)
     })
     it('[11] drive method when NOT enough fuel returns correct string', () => {
       batmobile.fill(10)
-      expect(batmobile.drive(201)).toContain(200)
+      expect(batmobile.drive(200)).toContain(200)
     })
   })
   
